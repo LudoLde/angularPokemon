@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+.border-Feu {
+   border: solid 3px red lighten-1 !important;
+}
+.border-Eau {
+   border: solid 3px blue lighten-1 !important;
+}
+.border-Plante {
+   border: solid 3px green lighten-1 !important;
+}
+.border-Insecte {
+   border: solid 3px brown lighten-1 !important;
+}
+.border-Normal {
+   border: solid 3px grey lighten-1 !important;
+}
+.border-Vol {
+   border: solid 3px blue lighten-3 !important;
+}
+.border-Poison {
+   border: solid 3px deep-purple accent-1 !important;
+}
+.border-Fée {
+   border: solid 3px pink lighten-4 !important;
+}
+.border-Electrik {
+   border: solid 3px lime accent-1 !important;
+}
+.border-Combat {
+   border: solid 3px deep-orange !important;
+}

@@ -1,0 +1,17 @@
+<div style="background-color: midnightblue; height: 110px; padding-top: 24px; color: yellow; font-family: fantasy">
+   <h1 class="container text-center">PokeDex</h1>
+</div>
+<div class="d-flex flex-wrap justify-content-center m-auto gap-5 mt-5" style="width: 95%">
+   <div
+      *ngFor="let pokemon of pokemonList"
+      PokemonBorderDesign
+      [types]="pokemon.types"
+      class="card d-flex align-items-center flex-row"
+      style="width: 30%; height: 35%">
+      <img src="{{ pokemon.picture }}" alt="pokemon-image" style="width: 145px; height: 175px" />
+      <div class="fs-4">
+         <p># {{ pokemon.id }}</p>
+         <p>Nom: {{ pokemon.name }}</p>
+      </div>
+   </div>
+</div>

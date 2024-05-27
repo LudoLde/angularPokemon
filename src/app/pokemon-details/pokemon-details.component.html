@@ -1,0 +1,35 @@
+<div style="background-color: midnightblue; height: 110px; padding-top: 24px; color: yellow; font-family: fantasy">
+   <h1 class="container text-center">Pokemon #{{ pokemon?.id }}</h1>
+</div>
+<div>
+   <div
+      class="card d-flex align-items-center flex-row m-auto w-75"
+      style="
+         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+         margin-top: 140px !important;
+         margin-bottom: 90px !important;
+         height: 550px;
+      ">
+      <img src="{{ pokemon?.picture }}" alt="pokemon-picture" style="width: 430px; height: 450px" />
+      <table class="fs-1">
+         <tbody>
+            <tr>
+               <th scope="row">Nom:</th>
+               <td>{{ pokemon?.name }}</td>
+            </tr>
+            <tr>
+               <th scope="row">Points de vie:</th>
+               <td>{{ pokemon?.hp }}</td>
+            </tr>
+            <tr *ngFor="let type of pokemon?.types">
+               <th scope="row">Type(s):</th>
+               <td class="{{ type | pokemonTypeDesign }} fs-1" style="margin-top: 27px; height: 45px; padding-top: 4px">{{ type }}</td>
+            </tr>
+            <tr>
+               <th scope="row">Crée le:</th>
+               <td>{{ pokemon?.created | date : "dd/MM/YYYY" }}</td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>
